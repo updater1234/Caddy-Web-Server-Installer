@@ -605,6 +605,7 @@ User=$caddyuser
 StartLimitInterval=86400
 StartLimitBurst=5
 LimitNOFILE=16535
+Environment=CADDYPATH=/etc/ssl/caddy
 ExecStart=$caddypath/caddy -conf=$caddyfile -quiet=true -pidfile=/var/run/caddy/caddy.pid -agree
 ExecReload=/bin/kill -USR1 $MAIN$MAINPID
 ExecStop=/bin/kill $MAIN$MAINPID
